@@ -6,6 +6,7 @@ then
     npm i
     cd ..
     echo Local Repo has been updated
+    mkdir kit_bot/src/config.files
     cp ./secret1/main.config.json kit_bot/src/config.files
 else
     echo Downloading Bot...
@@ -16,6 +17,8 @@ else
 
     cd ..
     echo Bot downloaded.
+    mkdir kit_bot/src/config.files
+
     cp ./secret1/main.config.json kit_bot/src/config.files
 fi
 
@@ -27,6 +30,8 @@ then
     npm i
     cd ..
     echo Local Repo has been updated
+    mkdir kit_feedback_collection_for_bot/config.files
+
     cp ./secret2/main.config.json kit_feedback_collection_for_bot/config.files
 else
     echo Downloading Feedback...
@@ -37,6 +42,8 @@ else
 
     cd ..
     echo Feedback downloaded.
+    mkdir kit_feedback_collection_for_bot/config.files
+
     cp ./secret2/main.config.json kit_feedback_collection_for_bot/config.files
 
 fi

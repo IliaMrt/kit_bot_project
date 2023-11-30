@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+
+  bot:
+    container_name: bot
+    build:
+      context: ./kit_bot
+      dockerfile: ./Dockerfile
+      target: development
+    restart: always
+    depends_on:
+      feedback:
+        condition: service_healthy
+    ports:
+      - "3200"
+
+  feedback:
+    container_name: feedback
+    build:
+      context: ./kit_feedback_collection_for_bot
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - "3100"
+

@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.3"
 
 services:
 
@@ -13,7 +13,7 @@ services:
       feedback:
         condition: service_healthy
     ports:
-      - "3200"
+      - "3200":"3200"
 
   feedback:
     container_name: feedback
@@ -22,5 +22,5 @@ services:
       dockerfile: ./Dockerfile
     restart: always
     ports:
-      - "3100"
+      - "3100":"3100"
 

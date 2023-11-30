@@ -7,7 +7,6 @@ services:
     build:
       context: ./kit_bot
       dockerfile: ./Dockerfile
-      target: development
     restart: always
     depends_on:
       feedback:

@@ -8,6 +8,8 @@ services:
       context: ./kit_bot
       dockerfile: ./Dockerfile
     restart: always
+    depends_on:
+      - feedback
     network_mode: host
 
   feedback:

@@ -10,6 +10,12 @@ services:
     restart: always
     depends_on:
       - feedback
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3110/api"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 30
+
     network_mode: host
 
   feedback:

@@ -16,7 +16,7 @@ services:
       timeout: 30s
       retries: 6
     environment:
-      TZ: "Russia/Moscow"
+      TZ: "Europe/Moscow"
     network_mode: host
 
   feedback:
@@ -25,6 +25,6 @@ services:
       context: ./kit_feedback_collection_for_bot
       dockerfile: ./Dockerfile
     environment:
-      TZ: "Russia/Moscow"
+      TZ: "Europe/Moscow"
     restart: always
     network_mode: host

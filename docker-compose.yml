@@ -15,7 +15,8 @@ services:
       interval: 5s
       timeout: 30s
       retries: 6
-
+    environment:
+      TZ: "Russia/Moscow"
     network_mode: host
 
   feedback:

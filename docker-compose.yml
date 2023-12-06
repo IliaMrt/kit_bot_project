@@ -24,5 +24,7 @@ services:
     build:
       context: ./kit_feedback_collection_for_bot
       dockerfile: ./Dockerfile
+    environment:
+      TZ: "Russia/Moscow"
     restart: always
     network_mode: host
